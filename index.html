@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-1.2.3.js"></script>
+
+<style>
+.sence{
+	width:600px;
+	height:600px;
+	margin:0 auto;
+	border: 1px solid black;
+}
+.block{
+	width:28px;
+	height:28px;
+	border:1px solid #fff;
+	float: left;
+}
+/*.red{
+	background: red;
+}
+.green{
+	background:green;
+}
+.yellow{
+	background: yellow;
+}
+.purple{
+	background: purple;
+}
+.pink{
+	background: pink;
+}*/
+.scale{
+	animation:fangdasuoxiao .6s ease;
+}
+@keyframes fangdasuoxiao{
+	0%,100%{
+		transform:scale(1,1);
+	}
+	80%{
+		transform:scale(1.2,1.2)
+	}
+}
+.word{
+	font-size: 20px;
+	color:#fff;
+	text-align: center;
+}
+
+.saolei{
+	width:601px;
+	height:602px;
+	margin:30px auto;
+	background: rgba(0,0,0,0.1);
+}
+.block{
+	width:26px;
+	height:26px;
+	border-top:2px solid #fff;
+	border-left:2px solid #fff;
+	border-right:2px solid #7c7c7c;
+	border-bottom:2px solid #7c7c7c;
+	float: left;
+	background: #4a84aa;
+	color:red;
+	text-align: center;
+	line-height: 26px;
+	font-size: 20px;
+}
+.red{
+	width: 26px;
+	height: 26px;
+	background-image: url(./imgs/2.jpg);
+	background-repeat: no-repeat;
+	background-position-x: 4px;
+	background-position-y: 5px;
+}
+/*.color1{
+	background: #7BC0F4;
+}
+.color2{
+	background: #F5BDB3;
+}
+.color3{
+	background: #A6E1F9;
+}
+.color4{
+	background: #F5747C;
+}
+.color5{
+	background: yellowgreen;
+}
+.color6{
+	background:#C363B7; 
+}*/
+.scale{
+	-webkit-animation:fangdasuoxiao .6s ease;
+}
+@-webkit-keyframes fangdasuoxiao{
+	0%,100%{
+		transform:scale(1,1);
+	}
+	80%{
+		transform:scale(1.2,1.2)
+	}
+}
+.word{
+	font-size: 20px;
+	color:#fff;
+	text-align: center;
+}
+body{
+	background-image: url(./imgs/1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+}
+</style>
+</head>
+<body>
+	<div class="saolei"></div>
+</body>
+<script>
+(function(){
+		// var row=20;
+		// var h='';
+  //       for(var i=0;i<Math.pow(row+2,2);i++){
+  //      	      h+='<div></div>';
+  //      	}
+  //      var colors=['red','green','yellow','purple','pink'];
+  //      $('.sence').html(h).find('div').addClass(function(i){
+  //      	  return ' block '+ colors[i%5];
+  //      });
+  //      $('.sence')
+  //      .find('div:lt(23)').removeClass().end()
+  //      .find('div:gt(461)').removeClass().end()
+  //      .find('div:nth-child(22n+1)').removeClass().end()
+  //      .find('div:nth-child(22n)').removeClass().end()
+  //      .find('div')
+  //      .each(function(i){
+  //         $(this).data('index',i);//是没有 所以用值记 
+  //      })
+  //      .find('.block').each(function(i){
+  //           if(Math.random()>0.8){
+  //           	$(this).data("islei",true).text('lei');
+  //           }  
+  //      })
+  //      .click(function(){
+  //          if($(this).data("islei")){
+  //              alert("boom!");
+  //              $('.sence').find('.block')
+		// 		.removeClass()
+		// 		.addClass('block')
+		// 		.addClass(function(){
+		// 			if ($(this).data('islei')) {
+		// 				return 'red scale';
+		// 			}
+		// 		}).css('animation-delay',function(){
+		// 			return Math.random()*0.8.toFixed(2)+'s';
+		// 		})
+				
+		// 	}else{
+		// 		var shu=0;
+		// 		var pos=$(this).data('index');
+		// 		if($('.sence div').eq(pos-1).data('islei')){shu++;};
+		// 		if($('.sence div').eq(pos+1).data('islei')){shu++;};
+		// 		if($('.sence div').eq(pos+22).data('islei')){shu++;};
+		// 		if($('.sence div').eq(pos+21).data('islei')){shu++;};
+		// 		if($('.sence div').eq(pos+23).data('islei')){shu++;};
+		// 		if($('.sence div').eq(pos-22).data('islei')){shu++;};
+		// 		if($('.sence div').eq(pos-21).data('islei')){shu++;};
+		// 		if($('.sence div').eq(pos-23).data('islei')){shu++;};
+		// 		$(this).text(shu).addClass('word');
+		// 	}
+		// })
+
+       // .find('div')
+       // .addClass('block')
+       // .addClass(function(){
+       // 	 return 'block'+colors[i%6];
+       // })
+       // .attr('lei',function(i){
+       // 	 if(Math.random()>0.6){
+       //        return 'true';
+       // 	 }
+       // })
+   //     .each(function(index,i){
+   //     	   	if(Math.random()>0.8){
+   //     	   		$(this).data("islei",true)
+			// }
+			// $(this).data('index',i)
+   //     })
+   //     .click(function(i){
+   //         if($(this).data("islei")){
+			// 	alert("boom!");
+			// 	$(".sence div").each(function(i){
+			// 		if($(this).data("islei")){
+			// 		$(this).addClass("red");
+			// 	   }
+			// 	})
+			// }
+   //     });
+
+
+
+
+
+   var row=20;
+   var el='';
+   for (var i = 0; i <Math.pow(row+2,2); i++) {
+   	el +='<div></div>';
+   }
+   $('.saolei').html(el)
+   .find('div')
+   .addClass('block')
+   $('.saolei div:lt(23)').removeClass();
+   $('.saolei div:gt(461)').removeClass();
+   $('.saolei div:nth-child(22n+1)').removeClass();
+   $('.saolei div:nth-child(22n)').removeClass();
+
+   $('.saolei div').each(function(i){
+   	$(this).data('index',i);
+   })
+   $('.saolei .block').each(function(i){
+   	if(Math.random()>0.8){
+   		$(this).data('islei',true)
+   	}
+   }).click(function(){
+   	if ($(this).data('islei')) {
+   		alert('bong');
+   		$('.saolei').find('.block')
+   		.removeClass()
+   		.addClass('block')
+   		.addClass(function(){
+   			if ($(this).data('islei')) {
+   				return 'red scale';
+   			}
+   		}).css('animation-delay',function(){
+   			return Math.random()*0.8.toFixed(2)+'s';
+   		})
+
+   	}else{
+   		var shu=0;
+   		var pos=$(this).data('index');
+   		if($('.saolei div').eq(pos-1).data('islei')){shu++;};
+   		if($('.saolei div').eq(pos+1).data('islei')){shu++;};
+   		if($('.saolei div').eq(pos+22).data('islei')){shu++;};
+   		if($('.saolei div').eq(pos+21).data('islei')){shu++;};
+   		if($('.saolei div').eq(pos+23).data('islei')){shu++;};
+   		if($('.saolei div').eq(pos-22).data('islei')){shu++;};
+   		if($('.saolei div').eq(pos-21).data('islei')){shu++;};
+   		if($('.saolei div').eq(pos-23).data('islei')){shu++;};
+   		$(this).text(shu).addClass('word');
+   	}
+   })
+
+	// var colors=['color1','color2','color3','color4','color5','color6'];
+	// for (var i = 0; i < 400; i++) {
+	// 	$('.saolei .block').addClass(function(i){
+	// 		return colors[i % 6];
+	// 	})
+	// }
+})()
+</script>
+</html>
